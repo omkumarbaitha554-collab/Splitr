@@ -15,17 +15,19 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <body className={inter.className} suppressHydrationWarning={true}>
-      <ClerkProvider>
-        <ConvexClientProvider>
-          <Header />
+    <html lang="en">
+      <body className={inter.className} suppressHydrationWarning={true}>
+        <ClerkProvider>
+          <ConvexClientProvider>
+            <Header />
 
-          <main className="min-h-screen">
-            {children}
-            <Toaster richColors />
-          </main>
-        </ConvexClientProvider>
-      </ClerkProvider>
-    </body>
+            <main className="min-h-screen">
+              {children}
+              <Toaster richColors />
+            </main>
+          </ConvexClientProvider>
+        </ClerkProvider>
+      </body>
+    </html>
   );
 }
